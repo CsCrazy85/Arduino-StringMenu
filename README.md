@@ -23,5 +23,9 @@ This string is stored in a variable called menuItems.
 Create the functions for the main menu items. When parameter has changed, this function is called. Please note that the order is relevant in here, since function addresses are stored in a table. You should have at least as many functions declared here than what there's declared in menuItems. If you have more functions, it doesn't matter, but if you have less the program will not work properly.
 
 ## Step 3
+Update or check that the function pointer table, which holds the names of the menus are correct and matches the actual function names.
 
-Update or check that the function pointer table, which holds the names of the menus.
+## Step 4
+Write your functions what you need and how you like them to work
+Note that when the first parameter is selected from the menu, number 1 is returned. Second parameter is number 2 etc...
+Value 0 in parameter value only indicates that no changes have been made.
