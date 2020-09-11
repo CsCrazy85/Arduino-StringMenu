@@ -8,13 +8,20 @@ When creating the menu, there's a few steps involved after which the menus are c
 ## Step 1
 Use the following syntax to add your own menu-system (note only one level of menus is supported so no submenus). 
 
-Start with semicolon ; 
-
-then add your menuItem name first, ending with period .
-
-then add desired parameters separated with % (percent) and end parameters with a semicolon ;
-
-Create another menu if needed following the same princible.
+* Start with semicolon ; 
+* then add your menuItem name first, ending with period .
+* then add desired parameters separated with % (percent) and end parameters with a semicolon ;
+* Create another menu if needed following the same princible.
 
 For example:
-'const char *menuItems = ";Led.On%Off%param1;"'
+
+";Led.On%Off%param1;"
+
+This string is stored in a variable called menuItems.
+
+## Step 2
+Create the functions for the main menu items. When parameter has changed, this function is called. Please note that the order is relevant in here, since function addresses are stored in a table. You should have at least as many functions declared here than what there's declared in menuItems. If you have more functions, it doesn't matter, but if you have less the program will not work properly.
+
+## Step 3
+
+Update or check that the function pointer table, which holds the names of the menus.
