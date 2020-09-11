@@ -20,7 +20,13 @@ For example:
 This string is stored in a variable called menuItems.
 
 ## Step 2
-Create the functions for the main menu items. When parameter has changed, this function is called. Please note that the order is relevant in here, since function addresses are stored in a table. You should have at least as many functions declared here than what there's declared in menuItems. If you have more functions, it doesn't matter, but if you have less the program will not work properly.
+Create the functions for the main menu items. When parameter has changed, this function is called. Please note that the order is relevant in here, since function addresses are stored in a table. You should have at least as many functions declared here than what there's declared in menuItems. If you have more functions, it doesn't matter, but if you have less the program will not work properly and crash.
+
+For example for the Led -menu above, there are three parameters, On - Off - param1. When user selects this menu from the main menu, function call is needed. Therefore for this menu we have to create a function called (just an example, f-name can be anything) 
+
+int menuLedFunction(int led);
+
+In here (above) program jumps to menuLedFunction and parameter led is passed. Value of the parameter is a number starting from 1, which means the first parameter is selected. Value of 2 means the second parameter was selected and so on. 0 means nothing is selected. Note that only value from 0 ... n is passed.
 
 ## Step 3
 Update or check that the function pointer table, which holds the names of the menus are correct and matches the actual function names.
